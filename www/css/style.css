@@ -1,0 +1,321 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+}
+
+body {
+    background-color: #f3f4f6;
+    color: #1f2937;
+    line-height: 1.5;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #d1d5db;
+}
+
+h1 {
+    color: #4b5563;
+    margin-bottom: 1rem;
+}
+
+.account-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+#nameInput {
+    width: 100%;
+    max-width: 300px;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.25rem;
+    outline: none;
+}
+
+#nameInput:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.3);
+}
+
+.account-id {
+    font-size: 0.75rem;
+    color: #6b7280;
+    font-family: monospace;
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.tab-container {
+    background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.tabs {
+    display: flex;
+    background-color: #f9fafb;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.tab {
+    flex: 1;
+    padding: 0.75rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-weight: 500;
+    color: #6b7280;
+}
+
+.tab:hover {
+    background-color: #f3f4f6;
+}
+
+.tab.active {
+    color: #3b82f6;
+    border-bottom: 2px solid #3b82f6;
+}
+
+.tab-content {
+    padding: 1.5rem;
+}
+
+.tab-pane {
+    display: none;
+}
+
+.tab-pane.active {
+    display: block;
+}
+
+/* Poll styling */
+#poll-container {
+    text-align: center;
+}
+
+#poll-title {
+    margin-bottom: 1.5rem;
+}
+
+.option-button {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 0.75rem;
+    background-color: white;
+    border: 1px solid #d1d5db;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-align: left;
+}
+
+.option-button:hover {
+    background-color: #f9fafb;
+    border-color: #9ca3af;
+}
+
+.option-button.selected {
+    background-color: #eff6ff;
+    border-color: #3b82f6;
+}
+
+#results-container {
+    margin-top: 2rem;
+}
+
+.result-bar {
+    height: 2rem;
+    background-color: #e5e7eb;
+    border-radius: 0.25rem;
+    margin-bottom: 1rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.result-fill {
+    height: 100%;
+    background-color: #3b82f6;
+    display: flex;
+    align-items: center;
+    padding: 0 0.5rem;
+    color: white;
+    font-weight: 500;
+    min-width: 2rem;
+    justify-content: space-between;
+}
+
+.result-label {
+    margin-bottom: 0.25rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Create poll form */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.25rem;
+    outline: none;
+}
+
+input:focus, textarea:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.3);
+}
+
+button {
+    padding: 0.5rem 1rem;
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+button:hover {
+    background-color: #2563eb;
+}
+
+#add-option {
+    background-color: #f3f4f6;
+    color: #4b5563;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+    margin-top: 0.5rem;
+}
+
+#add-option:hover {
+    background-color: #e5e7eb;
+}
+
+.option-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.option-input {
+    flex-grow: 1;
+    margin-right: 0.5rem;
+}
+
+.remove-option {
+    background-color: #ef4444;
+    color: white;
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.25rem;
+    padding: 0;
+}
+
+.remove-option:hover {
+    background-color: #dc2626;
+}
+
+/* Invite tab */
+.invite-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+}
+
+.invite-actions button {
+    width: 48%;
+}
+
+.hidden {
+    display: none;
+}
+
+.invite-description {
+    margin-bottom: 1rem;
+    color: #6b7280;
+}
+
+.invite-container {
+    margin-bottom: 1.5rem;
+}
+
+.invite-code {
+    padding: 0.75rem;
+    background-color: #f3f4f6;
+    border: 1px solid #d1d5db;
+    border-radius: 0.25rem;
+    font-family: monospace;
+    margin-bottom: 0.5rem;
+    word-break: break-all;
+    white-space: pre-wrap;
+}
+
+#join-code {
+    height: 6rem;
+    resize: none;
+    margin-bottom: 1rem;
+}
+
+.connections-section {
+    margin-top: 2rem;
+}
+
+.connection {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    font-size: 0.875rem;
+}
+
+.connection-status {
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    margin-right: 0.5rem;
+}
+
+.status-connected {
+    background-color: #10b981;
+}
+
+.status-disconnected {
+    background-color: #f59e0b;
+}
+
+.connection-id {
+    font-family: monospace;
+}

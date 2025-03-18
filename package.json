@@ -1,0 +1,57 @@
+{
+  "name": "pzpVoting",
+  "version": "1.0.0",
+  "description": "PZP Voting Demo App",
+  "main": "main.js",
+  "scripts": {
+    "start": "cordova run browser",
+    "build": "cordova build",
+    "android": "cordova run android",
+    "ios": "cordova run ios",
+    "electron": "ELECTRON_START_URL=http://localhost:8000 electron ."
+  },
+  "dependencies": {
+    "cordova-android": "^10.1.2",
+    "cordova-browser": "^6.0.0",
+    "cordova-ios": "^6.2.0",
+    "cordova-plugin-device": "^2.1.0",
+    "cordova-plugin-file": "^7.0.0",
+    "cordova-plugin-network-information": "^3.0.0",
+    "cordova-plugin-statusbar": "^3.0.0",
+    "electron": "^28.1.1",
+    "pzp-caps": "^1.0.0",
+    "pzp-conductor": "^1.0.2",
+    "pzp-db": "^1.0.4",
+    "pzp-dict": "^1.0.1",
+    "pzp-gc": "^1.0.0",
+    "pzp-goals": "^1.0.1",
+    "pzp-hub-client": "^1.0.0",
+    "pzp-invite": "^1.0.0",
+    "pzp-keypair": "^1.0.0",
+    "pzp-net": "^1.0.1",
+    "pzp-promise": "^1.0.0",
+    "pzp-sdk": "^1.0.0",
+    "pzp-set": "^1.0.1",
+    "pzp-sync": "^1.0.4",
+    "pull-awaitable": "1.0.0",
+    "secret-handshake-ext": "0.0.11",
+    "secret-stack": "8.1.0",
+    "sodium-native": "4.1.1"
+  },
+  "devDependencies": {
+    "cordova": "^12.0.0"
+  },
+  "cordova": {
+    "platforms": [
+      "android",
+      "ios",
+      "browser"
+    ],
+    "plugins": {
+      "cordova-plugin-device": {},
+      "cordova-plugin-file": {},
+      "cordova-plugin-network-information": {},
+      "cordova-plugin-statusbar": {}
+    }
+  }
+}

@@ -1,0 +1,29 @@
+ <?xml version='1.0' encoding='utf-8'?>
+<widget id="com.example.pzpvoting" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>PZP Voting</name>
+    <description>A Cordova app for live voting using PZP protocol</description>
+    <author email="info@example.com" href="https://example.com">
+        Your Name
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <allow-intent href="pzp:*" />
+    <platform name="android">
+        <allow-intent href="market:*" />
+        <preference name="AndroidWindowSplashScreenAnimatedIcon" value="res/screen/android/splash.png" />
+        <preference name="SplashScreenDelay" value="3000" />
+    </platform>
+    <platform name="ios">
+        <allow-intent href="itms:*" />
+        <allow-intent href="itms-apps:*" />
+    </platform>
+    <preference name="StatusBarOverlaysWebView" value="false" />
+    <preference name="StatusBarBackgroundColor" value="#4B5563" />
+    <preference name="StatusBarStyle" value="lightcontent" />
+</widget>

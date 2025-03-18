@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PZP Voting</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>PZP Voting</h1>
+            <div class="account-section">
+                <input type="text" id="nameInput" placeholder="Set your name" disabled>
+                <span id="accountID" class="account-id"></span>
+            </div>
+        </header>
+
+        <main>
+            <div class="tab-container">
+                <div class="tabs">
+                    <button class="tab active" data-tab="vote">Vote</button>
+                    <button class="tab" data-tab="create">Create Poll</button>
+                    <button class="tab" data-tab="invite">Invite</button>
+                </div>
+                
+                <div class="tab-content">
+                    <div id="vote-tab" class="tab-pane active">
+                        <div id="poll-container">
+                            <h2 id="poll-title">Waiting for poll...</h2>
+                            <div id="options-container">
+                                <!-- Options will be added here -->
+                            </div>
+                            <div id="results-container">
+                                <h3>Results</h3>
+                                <div id="results-chart"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div id="create-tab" class="tab-pane">
+                        <h2>Create a Poll</h2>
+                        <form id="create-poll-form">
+                            <div class="form-group">
+                                <label for="poll-title-input">Poll Title:</label>
+                                <input type="text" id="poll-title-input" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label>Options:</label>
+                                <div id="poll-options">
+                                    <div class="option-row">
+                                        <input type="text" class="option-input" required>
+                                        <button type="button" class="remove-option">&times;</button>
+                                    </div>
+                                    <div class="option-row">
+                                        <input type="text" class="option-input" required>
+                                        <button type="button" class="remove-option">&times;</button>
+                                    </div>
+                                </div>
+                                <button type="button" id="add-option">+ Add Option</button>
+                            </div>
+                            
+                            <button type="submit" id="create-poll-button">Create Poll</button>
+                        </form>
+                    </div>
+                    
+                    <div id="invite-tab" class="tab-pane">
+                        <h2>Join or Invite</h2>
+                        <div class="invite-actions">
+                            <button id="join-button">Join</button>
+                            <button id="invite-button">Invite</button>
+                        </div>
+                        
+                        <div id="invite-form" class="hidden">
+                            <h3>Invite Code</h3>
+                            <p class="invite-description">Share this invite code with others to join your poll.</p>
+                            <div class="invite-container">
+                                <div id="invite-code" class="invite-code"></div>
+                                <button id="copy-invite">Copy Code</button>
+                            </div>
+                        </div>
+                        
+                        <div id="join-form" class="hidden">
+                            <h3>Join Poll</h3>
+                            <p class="invite-description">Paste the invite code you received to join the poll.</p>
+                            <textarea id="join-code" placeholder="Paste invite code here (pzp:// or http://)"></textarea>
+                            <button id="submit-join">Join</button>
+                        </div>
+                        
+                        <div class="connections-section">
+                            <h3>Connections</h3>
+                            <div id="connections-list"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
