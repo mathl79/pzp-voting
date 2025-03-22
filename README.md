@@ -2,6 +2,9 @@
 
 A decentralized voting application built with PZP protocol, Electron, and Cordova.
 
+## based on the great decentral protocol PZP 
+ https://codeberg.org/pzp/
+
 ## Features
 
 - Create and participate in polls
